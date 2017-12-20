@@ -6,7 +6,7 @@ use warnings;
 sub total {
     my  $total_so_far = 0;
     foreach(@_) {
-        $total_so_far +=  @_;
+        $total_so_far +=  $_;
     }
     $total_so_far;
 }

@@ -3,3 +3,18 @@ use strict;
 use warnings;
 
 
+sub total {
+    my  $total_so_far = 0;
+    foreach(@_) {
+        $total_so_far +=  $_;
+    }
+    $total_so_far;
+}
+
+
+my @fred = (1..1000);
+my $fred_total = total(@fred);
+print "The total of \@fred is  $fred_total.\n";
+print "Enter some numbers on separate lines: ";
+my $user_total = total(<STDIN>);
+print "The total of those numbers is $user_total.\n";
