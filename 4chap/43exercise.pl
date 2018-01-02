@@ -7,18 +7,19 @@ sub avg{
     foreach (@_){
       $testsum1horse += $_;
     }
-    my $avg = $testsum1horse/scalar @_;
+    my $avg = $testsum1horse / scalar(@_);
 
 }
 
 sub above_average{
-    my $avg =&avg(@_);
-    foreach (@_){
-        if ($_>$avg){
-             push $_;
+    my $avg = &avg(@_);
+    my @list;
+    foreach my $element (@_){
+        if ($element > $avg){
+            push (@list, $element);
         }
     }
-
+    @list;
 
 }
 
