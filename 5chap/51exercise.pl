@@ -2,5 +2,6 @@
 use strict;
 use warnings;
 
+#@ARGV = reverse @ARGV;
 
-print <>;
+print reverse <>;
